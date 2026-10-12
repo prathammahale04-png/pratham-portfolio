@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #070709;
+    color: #F5F2EB;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom cinematic grain and ambient accents */
+.bg-obsidian {
+  background-color: #070709;
+}
+
+.bg-surface-elevated {
+  background-color: #0E0E14;
+}
+
+.bg-surface-card {
+  background-color: #14141C;
+}
+
+.border-subtle {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.text-ivory {
+  color: #F5F2EB;
+}
+
+.text-ivory-muted {
+  color: #9C9A93;
+}
+
+.text-crimson-accent {
+  color: #E11D48;
+}
+
+/* Optical balance */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070709;
+}
+::-webkit-scrollbar-thumb {
+  background: #23232E;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #990F24;
+}
