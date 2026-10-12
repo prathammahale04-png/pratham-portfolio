@@ -1,3 +1,5 @@
+import { IMAGES } from './images';
+
 export interface Project {
   id: string;
   title: string;
@@ -23,7 +25,7 @@ export const PROJECTS: Project[] = [
     tagline: 'Healthcare Web Platform & Patient Dashboard',
     category: 'Healthcare · Web Application',
     year: '2026',
-    image: '/src/assets/images/carenova_ui_mockup_1791784044827.jpg',
+    image: IMAGES.carenova,
     featured: true,
     isConcept: false,
     summary: 'A modern, dark-themed healthcare web application designed to help patients navigate appointments, clinical records, and health summaries through a clear and structured interface.',
@@ -45,7 +47,7 @@ export const PROJECTS: Project[] = [
     tagline: 'Conceptual Canvas Interface for Non-Linear Storytelling',
     category: 'Concept Project · UI Exploration',
     year: '2026',
-    image: '/src/assets/images/sonder_ai_interface_1791784057744.jpg',
+    image: IMAGES.sonderAi,
     featured: false,
     isConcept: true,
     summary: 'A conceptual node-based interface exploring how writers and creative directors might visually map out branching plots, character relationships, and story timelines.',
@@ -64,7 +66,7 @@ export const PROJECTS: Project[] = [
     tagline: 'Tactile Synthesizer Control Interface Concept',
     category: 'Concept Project · Audio Interface',
     year: '2025',
-    image: '/src/assets/images/aura_sound_interface_1791784072597.jpg',
+    image: IMAGES.auraSound,
     featured: false,
     isConcept: true,
     summary: 'A digital audio interface concept balancing tactile hardware-style rotary controls with real-time waveform visualization in an uncluttered studio layout.',

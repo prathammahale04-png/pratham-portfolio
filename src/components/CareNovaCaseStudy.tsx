@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ArrowUpRight, Check, Layout, Palette, Smartphone, Eye } from 'lucide-react';
+import { IMAGES } from '../data/images';
 
 export function CareNovaCaseStudy() {
   const [activeTab, setActiveTab] = useState<'overview' | 'appointments' | 'records'>('overview');
@@ -69,7 +70,7 @@ export function CareNovaCaseStudy() {
       <div className="rounded-2xl overflow-hidden bg-[#070709] border border-white/[0.08] shadow-[0_24px_64px_rgba(0,0,0,0.6)] mb-20 group relative">
         <div className="relative aspect-[16/9] w-full overflow-hidden">
           <img
-            src="/src/assets/images/carenova_ui_mockup_1791784044827.jpg"
+            src={IMAGES.carenova}
             alt="CareNova Healthcare Platform UI Dashboard"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"

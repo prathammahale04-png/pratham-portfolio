@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'motion/react';
+import { IMAGES } from '../data/images';
 
 interface ChoreographedRoseProps {
   containerRef: React.RefObject<HTMLDivElement | null>;
@@ -99,7 +100,7 @@ export function ChoreographedRose({ containerRef }: ChoreographedRoseProps) {
         className="fixed inset-0 pointer-events-none z-0 flex items-center justify-end pr-12 opacity-35 overflow-hidden"
       >
         <img
-          src="/src/assets/images/signature_crimson_rose_1791784030984.jpg"
+          src={IMAGES.rose}
           alt=""
           className="w-[420px] h-[420px] object-cover rounded-full mix-blend-screen"
         />
@@ -137,7 +138,7 @@ export function ChoreographedRose({ containerRef }: ChoreographedRoseProps) {
         {/* Soft edge radial mask to blend seamlessly into nocturnal black canvas */}
         <div className="relative w-[340px] h-[340px] sm:w-[460px] sm:h-[460px] md:w-[540px] md:h-[540px] lg:w-[600px] lg:h-[600px] rounded-full overflow-hidden [mask-image:radial-gradient(circle_at_center,_black_58%,_transparent_78%)]">
           <img
-            src="/src/assets/images/signature_crimson_rose_1791784030984.jpg"
+            src={IMAGES.rose}
             alt="Signature Crimson Rose"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover filter contrast-[1.12] brightness-[0.98] select-none"

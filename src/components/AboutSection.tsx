@@ -1,4 +1,5 @@
 import { ArrowUpRight, Camera } from 'lucide-react';
+import { IMAGES } from '../data/images';
 
 export function AboutSection() {
   return (
@@ -23,7 +24,7 @@ export function AboutSection() {
         <div className="lg:col-span-5 relative group">
           <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-[#070709] border border-white/[0.08] shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
             <img
-              src="/src/assets/images/editorial_designer_portrait_1791784084309.jpg"
+              src={IMAGES.portrait}
               alt="Pratham — AI Web Designer & Digital Product Creator"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover filter contrast-[1.05] grayscale-[25%] group-hover:grayscale-0 transition-all duration-700"

@@ -1,7 +1,7 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { Project } from './data/portfolioData';
 import { Navbar } from './components/Navbar';
-import { ChoreographedRose } from './components/ChoreographedRose';
+import { SolarSystemScene } from './components/SolarSystemScene';
 import { HeroSection } from './components/HeroSection';
 import { ManifestoSection } from './components/ManifestoSection';
 import { SelectedWorkSection } from './components/SelectedWorkSection';
@@ -13,7 +13,6 @@ import { ContactSection } from './components/ContactSection';
 import { ProjectModal } from './components/ProjectModal';
 
 export default function App() {
-  const containerRef = useRef<HTMLDivElement>(null);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const scrollToSection = (id: string) => {
@@ -24,14 +23,11 @@ export default function App() {
   };
 
   return (
-    <div ref={containerRef} className="relative min-h-screen bg-[#070709] text-[#F5F2EB] selection:bg-[#990F24] selection:text-[#F5F2EB]">
-      {/* 1. Signature Scroll-Choreographed Rose Visual Engine */}
-      <ChoreographedRose containerRef={containerRef} />
-
-      {/* 2. Top Navigation Bar (Contract compliant: 3 zones, single-line) */}
+    <div className="relative min-h-screen bg-[#070709] text-[#F5F2EB] selection:bg-[#990F24] selection:text-[#F5F2EB]">
       <Navbar onContactClick={() => scrollToSection('contact')} />
 
-      {/* 3. Main Content Flow */}
+      <SolarSystemScene />
+
       <main className="relative z-10 flex flex-col">
         {/* Section 1: Hero */}
         <HeroSection
@@ -64,7 +60,6 @@ export default function App() {
         <ContactSection />
       </main>
 
-      {/* 4. Fullscreen Project Detail Lightbox Modal */}
       <ProjectModal
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
